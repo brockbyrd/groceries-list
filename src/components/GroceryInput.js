@@ -7,8 +7,21 @@ function GroceryInput() {
 
         return (
             <div>
-                <input type="text" className="grocery_input" onChange={() => setItem() }placeholder="Grocery Item" />
-                <input type="text" className="grocery_input" placeholder="Grocery Brand" />
+                <input
+                    type="text"
+                    className="grocery_input"
+                    placeholder="Grocery Item"
+                    value={item}
+                    onChange={(event) => setItem(event.target.value)}
+                />
+                <p>{item}</p>
+                <input
+                    type="text"
+                    className="grocery_input"
+                    placeholder="Grocery Brand"
+                    value={brand}
+                    onChange={(event) => setBrand(event.target.value)}
+                />
 
                 <button className="counter_button" onClick={() => setCount(count + 1)}> + </button>
                 <p className="counter">{count}</p>
