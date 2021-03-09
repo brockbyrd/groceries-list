@@ -14,7 +14,6 @@ function GroceryInput() {
                     value={item}
                     onChange={(event) => setItem(event.target.value)}
                 />
-                <p>{item}</p>
                 <input
                     type="text"
                     className="grocery_input"
@@ -26,7 +25,7 @@ function GroceryInput() {
                 <button className="counter_button" onClick={() => setCount(count + 1)}> + </button>
                 <p className="counter">{count}</p>
                 <button className="counter_button" onClick={() => setCount(count - 1)}> - </button>
-                <input type="submit" />
+                <input type="submit" value="Submit" />
             </div>
         )
 }
