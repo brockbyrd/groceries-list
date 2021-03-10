@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button';
 
 function GroceryInput() {
     const [item, setItem] = useState('');
@@ -22,9 +23,9 @@ function GroceryInput() {
                     onChange={(event) => setBrand(event.target.value)}
                 />
 
-                <button className="counter_button" onClick={() => setCount(count + 1)}> + </button>
+                <Button variant="outline-dark" onClick={() => setCount(count + 1)}> + </Button>
                 <p className="counter">{count}</p>
-                <button className="counter_button" onClick={() => setCount(count - 1)}> - </button>
+                <Button variant="outline-dark" onClick={() => setCount(count - 1)}> - </Button>
                 <input type="submit" value="Submit" />
             </div>
         )
